@@ -31,6 +31,7 @@ function App() {
           <NewArrival/>
           <Footer/>
           
+          
         </div>
   </div>
   </>

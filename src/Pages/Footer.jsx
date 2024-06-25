@@ -12,8 +12,8 @@ import phonepay from '../assests/footer/phonepay.png'
 const Footer = () => {
   return (
     <div>
-        <div className=' bg-slate-800  w-full sm:p-16 p-2 sm:mt-6 mt-2 text-gray-400'>
-            <div className=' flex justify-between sm:max-w-4xl sm:px-10 '>
+        <div className=' bg-slate-800  w-full sm:p-24 p-2 sm:mt-6 mt-2 text-gray-400'>
+            <div className=' flex justify-between sm:max-w-5xl sm:px-10 '>
                 <div>
                     <h1 className=' text-pink-600 font-semibold'>CUSTOMER SERVICES</h1>
                     <div className=' text-sm mt-6'>
@@ -55,9 +55,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className=' border-b p-4 sm:max-w-4xl'></div>
+            <div className=' border-b p-4  sm:max-w-5xl'></div>
             
-            <div className=' flex justify-between sm:max-w-4xl sm:px-10 mt-6  '>
+            <div className=' flex justify-between sm:max-w-5xl sm:px-10 mt-6  '>
                 <div>
                     <h1 className=' text-white font-semibold'>MEN'S CLOTHING</h1>
                     <div className=' text-sm mt-6'>

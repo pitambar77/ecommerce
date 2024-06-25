@@ -51,30 +51,62 @@ const ProductsData = [
         rating:3.8
 
     },
-    // {
-    //     id:6,
-    //     img:shirt3,
-    //     title:"Oversize men's t-shirt",
-    //     star:Star,
-    //     rating:3.8
+    {
+        id:6,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
 
-    // },
-    // {
-    //     id:7,
-    //     img:shirt4,
-    //     title:"Oversize men's t-shirt",
-    //     star:Star,
-    //     rating:3.8
+    },
+    {
+        id:7,
+        img:shirt4,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
 
-    // },
-    // {
-    //     id:8,
-    //     img:shirt4,
-    //     title:"Oversize men's t-shirt",
-    //     star:Star,
-    //     rating:3.8
+    },
+    {
+        id:8,
+        img:shirt4,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
 
-    // },
+    },
+    {
+        id:9,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
+    {
+        id:10,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
+    {
+        id:11,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
+    {
+        id:12,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
 ]
 
 const PopularProduct = () => {
@@ -86,10 +118,13 @@ const PopularProduct = () => {
                 <h1 className=' text-2xl font-semibold text-gray-800 mt-5'> Most Popular Products </h1>
             </div>
             
-             <div className=' grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8 md:gap-5 mt-5 place-items-center'>
+             <div className=' grid gap-4 md:gap-5 mt-5 place-items-center'>
+             {/* <div className=' flex relative items-center m-5'> */}
+
+             <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                 {ProductsData.map((data) =>(
                     
-                    <div className=' rounded-xl bg-white overflow-hidden relative shadow-xl duration-300 group max-w-[300px]'>
+                    <div className=' rounded-xl bg-white overflow-hidden inline-block relative shadow-md border m-2 duration-300 group max-w-[180px]'>
                        
                         <div className=''>
                             <img src={data.img} alt="shirt" className=' p-8 transform transition duration-300 hover:scale-125 '/>
@@ -118,6 +153,8 @@ const PopularProduct = () => {
                     </div>
                    
                 ))}
+                </div>
+                
             </div>
             
             
