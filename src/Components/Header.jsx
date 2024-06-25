@@ -28,15 +28,15 @@ const Header = () => {
 
                 </div>
 
-                <div className=' flex gap-4 '>
+                <div className=' flex sm:gap-4 gap-2 '>
                     <div className='icon_wrapper'>
-                    <BiSolidCart  size={30}/>
+                    <BiSolidCart  className={` sm:size-8 size-4`}/>
                     </div>
                     <div className='icon_wrapper'>
-                    <MdNotificationsActive  size={30}/>
+                    <MdNotificationsActive  className={` sm:size-8 size-4`}/>
                     </div>
                     <div className='icon_wrapper bg-cyan-300'>
-                    <ImUser  size={30}/>
+                    <ImUser  className={` sm:size-8 size-4`}/>
                     </div>
                 </div>
                 
