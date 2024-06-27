@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import logo from '../assests/logo.png'
+import logo from '../assests/logo.png'
 import { ImHome3 } from "react-icons/im";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BiSolidCart } from "react-icons/bi";
@@ -66,12 +66,12 @@ const SideBar = () => {
 
   return (
 
-        <div className={` h-screen sm:p-2 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
+        <div className={` sticky top-0 h-screen sm:p-2 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
             {/* <IoIosArrowRoundBack className={`text-xl rounded-full absolute -right-3 top-9 border cursor-pointer text-gray-600 ${!open && "rotate-180"}`}
             onClick={()=>setOpen(!open)} /> */}
-            {/* <div>
-                <img src={logo} alt='logo' className=' text-2xl w-28 px-2'/>
-            </div> */}
+            <div>
+                <img src={logo} alt='logo' className=' text-2xl w-36 h-full p-2 cursor-pointer'/>
+            </div>
             <ul className=' sm:pt-1 pt-0'>
                 {Menus.map((menu,index) =>(
                     <>

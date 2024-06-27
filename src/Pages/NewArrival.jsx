@@ -66,29 +66,17 @@ const CatagoriesData = [
         img:shose,
         title:"shoes",
         price:2589,
-    },
-    {
-        id:11,
-        img:menShop,
-        title:"Men",
-        price:199,
-    },
-    {
-        id:12,
-        img:WomenShop,
-        title:"Women",
-        price:799,
     }
 ]
 
 const NewArrival = () => {
   return (
     <div>
-        <div className=' p-6 px-10'>
+        <div className=' '>
             <div className=''>
                 <h1 className=' text-xl font-semibold text-gray-700 mt-8 px-2'> New Arrival </h1>
             </div>
-             <div className=' grid grid-cols-2 sm:grid-cols-5 md:grid-cols-6 gap-4 md:gap-2 mt-5 place-items-center'>
+             <div className=' grid grid-cols-2 sm:grid-cols-5 gap-2 md:gap-2 mt-5 place-items-center'>
                 {CatagoriesData.map((data) =>(
                 <>
                 <div className=''>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { MdCurrencyRupee } from "react-icons/md";
 import shirt3 from '../assests/shirt3.png'
 import shirt4 from '../assests/shirt4.png'
@@ -111,9 +111,35 @@ const ProductsData = [
 
 const PopularProduct = () => {
 
+    const itemsRef = useRef(null);
+
+    const [isMouseDown, setIsMouseDown] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+
+    const handleMouseDown = (e) =>{
+        setIsMouseDown(true);
+        setStartX(e.pageX - - itemsRef.current.offsetLeft);
+        setScrollLeft(itemsRef.current.scrollLeft)
+    }
+    const handleMouseLeave = () =>{
+       setIsMouseDown(false);
+    }
+    const handleMouseUp = () =>{
+        setIsMouseDown(false);
+    }
+    const handleMouseMove = (e) =>{
+        if(!isMouseDown) return;
+        e.preventDefault();
+        const x = e.pageX - itemsRef.current.offsetLeft;
+        const walk = (x-startX)*1;
+        itemsRef.current.scrollLeft = scrollLeft - walk
+    }
+
   return (
     <div >
-        <div className=' container'>
+        <div className=' '>
             <div className=''>
                 <h1 className=' text-2xl font-semibold text-gray-800 mt-8'> Most Popular Products </h1>
             </div>
@@ -121,7 +147,12 @@ const PopularProduct = () => {
              <div className=' grid gap-4 md:gap-5 mt-5 place-items-center'>
              {/* <div className=' flex relative items-center m-5'> */}
 
-             <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+             <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide cursor-pointer ' ref={itemsRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+                >
                 {ProductsData.map((data) =>(
                     
                     <div className=' rounded-xl bg-white overflow-hidden inline-block relative shadow-md border m-2 duration-300 group max-w-[180px]'>

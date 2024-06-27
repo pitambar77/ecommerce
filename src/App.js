@@ -12,22 +12,19 @@ import NewArrival from './Pages/NewArrival';
 import Footer from './Pages/Footer';
 
 
+
 function App() {
   return (
   <>
-  <Header/>
+  
   <div className=' flex'>
     <div>
         <SideBar/>
       </div>
         <div className=' p-6'>
-          
+          <Header/>
           <Home/>
           <PopularProduct/>
-         
-          
-        </div>
-  </div>
           <Add/>
           <TopSales/>
           <Catagories/>
@@ -35,6 +32,10 @@ function App() {
           <NewCollection/>
           <NewArrival/>
           <Footer/>
+          
+        </div>
+  </div>
+          
   </>
   );
 }

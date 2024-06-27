@@ -4,7 +4,7 @@ import { IoIosMenu } from "react-icons/io";
 import { BiSolidCart } from "react-icons/bi";
 import { MdNotificationsActive } from "react-icons/md";
 import { ImUser } from "react-icons/im";
-import logo from '../assests/logo.png'
+// import logo from '../assests/logo.png'
 
 
 const Header = () => {
@@ -12,12 +12,12 @@ const Header = () => {
   return (
    
     <div className=' sticky top-0 bg-white z-10 '>
-        <div className=' px-10'>
+        <div className=' container'>
             
             <div className=' flex justify-between items-center  '>
-            <div>
+            {/* <div>
                 <img src={logo} alt='logo' className=' text-2xl w-36 h-full p-2 cursor-pointer '/>
-            </div>
+            </div> */}
                 <div className=' sm:font-medium font-semibold ' > 
                     <h1 className=' sm:text-2xl text-sm'>Top Fashion Brands</h1>
                     <h1 className=' sm:text-base text-sm   '>Family wear collection</h1>
