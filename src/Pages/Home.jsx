@@ -10,7 +10,7 @@ import { MdCurrencyRupee } from "react-icons/md";
 const Home = () => {
   return (
     <div className=' container'>
-      <div className=' grid sm:grid-cols-3 pt-8 gap-5'>
+      <div className=' grid sm:grid-cols-3 pt-2 gap-5'>
       <div className='  relative block shadow-lg rounded-md shadow-gray-400'>
           <img className=' w-full h-full object-cover rounded-lg ' src={menImg} alt='men'/>
 

@@ -66,13 +66,13 @@ const SideBar = () => {
 
   return (
 
-        <div className={` h-screen  sm:p-3 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
+        <div className={` h-screen sm:p-2 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
             {/* <IoIosArrowRoundBack className={`text-xl rounded-full absolute -right-3 top-9 border cursor-pointer text-gray-600 ${!open && "rotate-180"}`}
             onClick={()=>setOpen(!open)} /> */}
             {/* <div>
                 <img src={logo} alt='logo' className=' text-2xl w-28 px-2'/>
             </div> */}
-            <ul className=' sm:pt-2 pt-0'>
+            <ul className=' sm:pt-1 pt-0'>
                 {Menus.map((menu,index) =>(
                     <>
                     <li key={index} className=' text-sm flex items-center sm:gap-x-4 gap-2 cursor-pointer sm:p-1 p-0 rounded-md sm:mt-2 mt-1 hover:bg-slate-200'>

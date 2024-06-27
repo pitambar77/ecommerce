@@ -112,10 +112,10 @@ const ProductsData = [
 const PopularProduct = () => {
 
   return (
-    <div>
+    <div >
         <div className=' container'>
             <div className=''>
-                <h1 className=' text-2xl font-semibold text-gray-800 mt-5'> Most Popular Products </h1>
+                <h1 className=' text-2xl font-semibold text-gray-800 mt-8'> Most Popular Products </h1>
             </div>
             
              <div className=' grid gap-4 md:gap-5 mt-5 place-items-center'>
