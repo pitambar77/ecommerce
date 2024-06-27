@@ -8,7 +8,7 @@ import banner from '../assests/banner/banner.png'
 const Banner = () => {
   return (
     <>
-        <div className=' m-6 '>
+        <div className=' px-10 '>
             <div className=' grid gap-8 sm:grid-cols-12'>
                 <div className=' relative sm:col-span-8 '> 
                     <img src={shoes} alt="" className=' w-full  md:h-[620px] h-[300px]  rounded-lg' />

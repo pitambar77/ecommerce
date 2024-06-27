@@ -4,17 +4,20 @@ import { IoIosMenu } from "react-icons/io";
 import { BiSolidCart } from "react-icons/bi";
 import { MdNotificationsActive } from "react-icons/md";
 import { ImUser } from "react-icons/im";
-
+import logo from '../assests/logo.png'
 
 
 const Header = () => {
 
   return (
    
-    <div className=' sticky top-0 bg-white z-10'>
-        <div className='container  '>
+    <div className=' sticky top-0 bg-white z-10 '>
+        <div className=' px-10'>
             
-            <div className=' flex justify-between  items-center '>
+            <div className=' flex justify-between items-center  '>
+            <div>
+                <img src={logo} alt='logo' className=' text-2xl w-36 h-full p-2 cursor-pointer '/>
+            </div>
                 <div className=' sm:font-medium font-semibold ' > 
                     <h1 className=' sm:text-2xl text-sm'>Top Fashion Brands</h1>
                     <h1 className=' sm:text-base text-sm   '>Family wear collection</h1>
@@ -28,7 +31,7 @@ const Header = () => {
 
                 </div>
 
-                <div className=' flex sm:gap-4 gap-2 '>
+                <div className=' flex sm:gap-4 gap-2 cursor-pointer '>
                     <div className='icon_wrapper'>
                     <BiSolidCart  className={` sm:size-8 size-4`}/>
                     </div>

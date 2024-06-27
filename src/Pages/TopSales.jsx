@@ -144,7 +144,7 @@ const ProductsData = [
 const TopSales = () => {
   return (
     <div>
-        <div className=' container mt-5'>
+        <div className=' p-2 px-10'>
             <div className=''>
                 <h1 className=' text-2xl font-semibold text-gray-800 '> Top Sale </h1>
             </div>
@@ -155,7 +155,7 @@ const TopSales = () => {
                             <img src={data.img} alt="shirt" className=' p-8 transform transition duration-300 hover:scale-125 '/>
                         </div>
 
-                        <div className=' p-6 '>
+                        <div className=' p-6  '>
                             <h1 className=' sm:text-md text-sm font-semibold'>{data.title}</h1>
                             <div className=' flex text-sm font-semibold text-blue-950 '>
                                 <h1 className=' '>Price:</h1>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assests/logo.png'
+// import logo from '../assests/logo.png'
 import { ImHome3 } from "react-icons/im";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BiSolidCart } from "react-icons/bi";
@@ -66,20 +66,20 @@ const SideBar = () => {
 
   return (
 
-        <div className={` h-screen top-0 sticky sm:p-3 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100 sm:w-60 w-28 `}>
+        <div className={` h-screen  sm:p-3 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
             {/* <IoIosArrowRoundBack className={`text-xl rounded-full absolute -right-3 top-9 border cursor-pointer text-gray-600 ${!open && "rotate-180"}`}
             onClick={()=>setOpen(!open)} /> */}
-            <div>
+            {/* <div>
                 <img src={logo} alt='logo' className=' text-2xl w-28 px-2'/>
-            </div>
+            </div> */}
             <ul className=' sm:pt-2 pt-0'>
                 {Menus.map((menu,index) =>(
                     <>
                     <li key={index} className=' text-sm flex items-center sm:gap-x-4 gap-2 cursor-pointer sm:p-1 p-0 rounded-md sm:mt-2 mt-1 hover:bg-slate-200'>
-                            <span className=' sm:text-sm text-xs block float-left'>
+                            <span className=' sm:text-sm text-xs block float-left px-4'>
                                 {menu.icon ? menu.icon:""}
                             </span>
-                        <span className={` sm:text-sm text-xs  font-medium flex-1 `}>{menu.title}</span>
+                        <span className={` sm:text-sm text-xs  font-medium flex-1  `}>{menu.title}</span>
 
                         {menu.submenu  && (
                         <MdKeyboardArrowDown className={`${submenuOpen && "rotate-180"} sm:text-lg text-xs`} onClick={()=>setSubmenuOpen(!submenuOpen)} />
@@ -89,7 +89,7 @@ const SideBar = () => {
                         <ul> 
                             {menu.subMenuItems.map((subMenuItem, index) =>(
                                 <li key={index} className=' sm:text-sm text-xs font-medium flex items-center sm:gap-x-3 gap-x-1 cursor-pointer sm:p-1 p-0 rounded-md mt-2 hover:bg-slate-200' >
-                                     <span className=' sm:text-xl text-xs block float-left text-blue-950'>
+                                     <span className=' sm:text-xl text-xs block float-left text-blue-950 px-4'>
                                         {subMenuItem.icon ? subMenuItem.icon :""}
                                     </span>
                                     {subMenuItem.title}
