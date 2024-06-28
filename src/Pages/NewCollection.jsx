@@ -62,7 +62,7 @@ const ProductsData = [
 
 const NewCollection = () => {
   return (
-    <div className=' pt-6'>
+    <div className=' container pt-6'>
         <div className=' grid sm:grid-cols-12 gap-6 bg-zinc-50'>
             <div className=' sm:col-span-4  '>
                 <img src={mobilebg} alt="" className=' h-full rounded-lg object-cover ' />

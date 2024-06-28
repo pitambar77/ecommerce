@@ -103,7 +103,7 @@ const Catagories = () => {
       };
   return (
     <div>
-        <div className=''>
+        <div className=' container'>
             <div className=''>
                 <h1 className=' text-xl font-semibold text-gray-700 mt-5 px-2'> Shop By Catagories </h1>
             </div>

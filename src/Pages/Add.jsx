@@ -6,7 +6,7 @@ import offer from '../assests/offer.png'
 
 const Add = () => {
   return (
-    <div className='  pt-2 '>
+    <div className=' container  pt-2 '>
         <div className='grid sm:grid-cols-4 grid-cols-2 gap-2 justify-between items-center text-blue-950 font-semibold'>
             <div className=' flex items-center'>
                 <div>

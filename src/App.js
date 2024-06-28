@@ -21,7 +21,7 @@ function App() {
     <div>
         <SideBar/>
       </div>
-        <div className=' p-6'>
+        <div className=''>
           <Header/>
           <Home/>
           <PopularProduct/>

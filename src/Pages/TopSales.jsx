@@ -144,7 +144,7 @@ const ProductsData = [
 const TopSales = () => {
   return (
     <div>
-        <div className=''>
+        <div className=' container'>
             <div className=''>
                 <h1 className=' text-2xl font-semibold text-gray-800 '> Top Sale </h1>
             </div>

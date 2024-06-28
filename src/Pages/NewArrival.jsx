@@ -72,11 +72,11 @@ const CatagoriesData = [
 const NewArrival = () => {
   return (
     <div>
-        <div className=' '>
+        <div className=' container '>
             <div className=''>
-                <h1 className=' text-xl font-semibold text-gray-700 mt-8 px-2'> New Arrival </h1>
+                <h1 className=' text-2xl font-semibold text-gray-700 mt-8'> New Arrival </h1>
             </div>
-             <div className=' grid grid-cols-2 sm:grid-cols-5 gap-2 md:gap-2 mt-5 place-items-center'>
+             <div className=' grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-2 md:gap-2 mt-8 place-items-center'>
                 {CatagoriesData.map((data) =>(
                 <>
                 <div className=''>

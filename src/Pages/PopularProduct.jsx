@@ -183,7 +183,7 @@ const PopularProduct = () => {
 
   return (
     <div >
-        <div className=' '>
+        <div className=' container '>
             <div className=''>
                 <h1 className=' text-2xl font-semibold text-gray-800 mt-8'> Most Popular Products </h1>
             </div>

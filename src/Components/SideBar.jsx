@@ -66,7 +66,7 @@ const SideBar = () => {
 
   return (
 
-        <div className={` sticky top-0 h-screen sm:p-2 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
+        <div className={` sticky top-0  h-screen sm:p-2 p-1 sm:pt-4 duration-300 text-blue-950 bg-slate-100  rounded sm:w-60 w-28 `}>
             {/* <IoIosArrowRoundBack className={`text-xl rounded-full absolute -right-3 top-9 border cursor-pointer text-gray-600 ${!open && "rotate-180"}`}
             onClick={()=>setOpen(!open)} /> */}
             <div>
@@ -110,8 +110,8 @@ const SideBar = () => {
 
                 <div className=' absolute flex flex-col justify-between items-center max-w-[220px] top-[50%] -translate-y-[40%] space-y-3'>
                     <h1 className=' sm:text-lg text-sm font-bold text-gray-800 '>Need Help!</h1>
-                    <p className=' ml-8 text-xs'>About account mangment ordering, payment & refund</p>
-                    <button className=' bg-blue-700 text-sm p-1 ml-4 text-white rounded-md'> Customer service </button>
+                    <p className=' ml-8 sm:text-xs'>About account mangment ordering, payment & refund</p>
+                    <button className=' bg-blue-700 sm:text-sm p-1 ml-4 text-white rounded-md'> Customer service </button>
                 </div>
           
         </div>
