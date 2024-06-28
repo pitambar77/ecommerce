@@ -1,9 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import menShop from '../assests/catagoriesImage/ShopM.png'
 import WomenShop from '../assests/catagoriesImage/ShopW.png'
 import Bags from '../assests/catagoriesImage/Bangs.png'
 import Vintages from '../assests/catagoriesImage/Vintages.png'
 import shose from '../assests/catagoriesImage/shose.png'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const CatagoriesData = [
     {
@@ -63,51 +67,58 @@ const CatagoriesData = [
 ]
 
 const Catagories = () => {
-
-    const itemsRef = useRef(null);
-
-    const [isMouseDown, setIsMouseDown] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-
-
-    const handleMouseDown = (e) =>{
-        setIsMouseDown(true);
-        setStartX(e.pageX - - itemsRef.current.offsetLeft);
-        setScrollLeft(itemsRef.current.scrollLeft)
-    }
-    const handleMouseLeave = () =>{
-       setIsMouseDown(false);
-    }
-    const handleMouseUp = () =>{
-        setIsMouseDown(false);
-    }
-    const handleMouseMove = (e) =>{
-        if(!isMouseDown) return;
-        e.preventDefault();
-        const x = e.pageX - itemsRef.current.offsetLeft;
-        const walk = (x-startX)*1;
-        itemsRef.current.scrollLeft = scrollLeft - walk
-    }
-
+    var settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: false,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
   return (
     <div>
-        <div className=' '>
+        <div className=''>
             <div className=''>
                 <h1 className=' text-xl font-semibold text-gray-700 mt-5 px-2'> Shop By Catagories </h1>
             </div>
              {/* <div className=' grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8 md:gap-5 mt-5 place-items-center'> */}
 
              <div className=' grid gap-4 md:gap-5 mt-5 place-items-center'>
-                <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide cursor-pointer' ref={itemsRef}
-                onMouseDown={handleMouseDown}
-                onMouseLeave={handleMouseLeave}
-                onMouseUp={handleMouseUp}
-                onMouseMove={handleMouseMove}
+                <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ' 
                 >
+                     <Slider {...settings}>
+
+                    
+
                 {CatagoriesData.map((data) =>(
                     //  <div className=' rounded-xl bg-white overflow-hidden inline-block m-2 relative shadow-xl duration-300 group  max-w-[300px]'>
-                    <div className=' rounded-xl bg-white overflow-hidden inline-block relative shadow-md border m-2 duration-300 group max-w-[180px]'>
+                    <div className=' rounded-xl bg-white  inline-block relative shadow-md border m-2 duration-300 group max-w-[180px]'>
 
                      <div className=''>
                          <img src={data.img} alt="shirt" className='  h-[200px] p-4 transform transition duration-300 hover:scale-125 '/>
@@ -120,6 +131,7 @@ const Catagories = () => {
                      </div>
                  </div>
                 ))}
+                </Slider>
                 </div>
             </div>
         </div>

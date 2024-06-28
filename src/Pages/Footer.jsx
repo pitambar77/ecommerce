@@ -12,7 +12,7 @@ import phonepay from '../assests/footer/phonepay.png'
 const Footer = () => {
   return (
     <div >
-        <div className=' bg-slate-800   w-full sm:p-14 p-2 sm:mt-6 mt-2 text-gray-400'>
+        <div className=' bg-slate-800  w-full sm:p-14 sm:mt-6 mt-2 text-gray-400'>
             <div className=' container'>
 
             

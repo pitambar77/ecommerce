@@ -70,7 +70,7 @@ const SideBar = () => {
             {/* <IoIosArrowRoundBack className={`text-xl rounded-full absolute -right-3 top-9 border cursor-pointer text-gray-600 ${!open && "rotate-180"}`}
             onClick={()=>setOpen(!open)} /> */}
             <div>
-                <img src={logo} alt='logo' className=' text-2xl w-36 h-full p-2 cursor-pointer'/>
+                <img src={logo} alt='logo' className=' text-4xl w-32 h-full px-2 cursor-pointer'/>
             </div>
             <ul className=' sm:pt-1 pt-0'>
                 {Menus.map((menu,index) =>(

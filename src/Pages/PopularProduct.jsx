@@ -1,4 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import { MdCurrencyRupee } from "react-icons/md";
 import shirt3 from '../assests/shirt3.png'
 import shirt4 from '../assests/shirt4.png'
@@ -107,35 +110,76 @@ const ProductsData = [
         rating:3.8
 
     },
+    {
+        id:13,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
+    {
+        id:14,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
+    {
+        id:15,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
+    {
+        id:16,
+        img:shirt3,
+        title:"Oversize men's t-shirt",
+        star:Star,
+        rating:3.8
+
+    },
 ]
 
 const PopularProduct = () => {
 
-    const itemsRef = useRef(null);
-
-    const [isMouseDown, setIsMouseDown] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-
-
-    const handleMouseDown = (e) =>{
-        setIsMouseDown(true);
-        setStartX(e.pageX - - itemsRef.current.offsetLeft);
-        setScrollLeft(itemsRef.current.scrollLeft)
-    }
-    const handleMouseLeave = () =>{
-       setIsMouseDown(false);
-    }
-    const handleMouseUp = () =>{
-        setIsMouseDown(false);
-    }
-    const handleMouseMove = (e) =>{
-        if(!isMouseDown) return;
-        e.preventDefault();
-        const x = e.pageX - itemsRef.current.offsetLeft;
-        const walk = (x-startX)*1;
-        itemsRef.current.scrollLeft = scrollLeft - walk
-    }
+    var settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: false,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
 
   return (
     <div >
@@ -147,12 +191,10 @@ const PopularProduct = () => {
              <div className=' grid gap-4 md:gap-5 mt-5 place-items-center'>
              {/* <div className=' flex relative items-center m-5'> */}
 
-             <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide cursor-pointer ' ref={itemsRef}
-                onMouseDown={handleMouseDown}
-                onMouseLeave={handleMouseLeave}
-                onMouseUp={handleMouseUp}
-                onMouseMove={handleMouseMove}
-                >
+             <div className=' w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'  >
+
+             <Slider {...settings}>
+
                 {ProductsData.map((data) =>(
                     
                     <div className=' rounded-xl bg-white overflow-hidden inline-block relative shadow-md border m-2 duration-300 group max-w-[180px]'>
@@ -184,6 +226,7 @@ const PopularProduct = () => {
                     </div>
                    
                 ))}
+                </Slider>
                 </div>
                 
             </div>
